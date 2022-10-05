@@ -1,0 +1,258 @@
+/** General Styles **/
+body{
+    font-family: sans-serif;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/** All Content Container **/
+.container{
+    width: 96%;
+    margin: 2%;
+    max-width: 640px;
+    background-color: white;
+}
+
+/** Header Section **/
+.header{
+    margin-bottom: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1px;
+}
+.header__logo{
+    grid-column: 2;
+    max-width: 220px;
+    padding-top: 40px;
+}
+.header__login-link{
+    justify-self: flex-end;
+    font-size: small;
+    padding: 15px;
+}
+.member-login:hover{
+    color: #22b9cd;
+}
+
+/**Content Area Section **/
+.content-area{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-area__image{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.content-area__image.static{
+    margin: 0;
+}
+.content-area__image.gif{
+    margin-bottom: 15px;
+}
+.content-area__text{
+    text-align: center;
+    line-height: 3rem;
+    font-size: medium;
+}
+.content-area__text.bold{
+    font-weight: bold;
+}
+
+/**Coupon Section **/
+.coupon-section{
+    width: 80%;
+    margin: 0 10% 20px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    color: #07555f;
+    border: solid 3px #22b9cd;
+    border-radius: 50px;
+}
+.coupon-section__code{
+    margin: 30px;
+}
+.coupon-section__membership-pin{
+    margin-bottom: 30px;
+}
+.coupon-section__join-button{
+    width: 12rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    height: 3rem;
+    padding: 0 15px;
+    color: white;
+    background-color: orangered;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+.coupon-section__join-button:hover {
+    background-color: white; /* Green */
+    color: orangered;
+    border: solid 2px orangered;
+    cursor: pointer;
+}
+
+/**Favourite Gym Section **/
+.fav-list{
+    width: 80%;
+    margin: 0 10% 20px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    background-color: #22b9cd;
+    color: white;
+    border: none;
+    border-radius: 50px;
+}
+.fav-list__heading{
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 30px;
+}
+.fav-list__li-container{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.fav-list__li{
+    display: flex;
+    margin:15px;
+    align-items: center;
+    font-size: medium;
+}
+.fav-list__bullet-point{
+    margin: 15px 30px;
+    background-color: #07555f;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: large;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**Closing Message Section **/
+.closing-message{
+    width: 80%;
+    margin: 0 10% 20px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.closing-message__text{
+    line-height: 3rem;
+}
+.closing-message__text.bold{
+    line-height: 0;
+    font-weight: bold;
+}
+.closing-message__text.smallprint{
+    font-size: small;
+    line-height: 4rem;
+    font-weight: lighter;
+}
+.tandcs-link{
+    text-decoration: underline;
+}
+
+/**Contact Section **/
+.contact{
+    width: 80%;
+    margin: 0 10% 40px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+    line-height: 1.5rem;
+    font-weight: lighter;
+}
+/*.contact__social-media-icons{}*/
+.icon{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+.unsub-privacy{
+    color: #22b9cd;
+}
+.unsub-privacy.link{
+    text-decoration: underline;
+}
+
+/** Media Queries **/
+/** Tablet **/
+@media only screen and (max-width: 768px){
+    .content-area__text, .closing-message__text, .closing-message__text.smallprint, .closing-message__text.bold{
+        line-height: 2rem;
+    }
+    .fav-list__bullet-point{
+        margin: 0 30px;
+    }
+}
+
+/** Medium Mobile **/
+@media only screen and (max-width: 470px){
+    .header__logo{
+        width: 150;
+    }
+    .header, .content-area, .content-area__image.gif, .coupon-section, .fav-list, .closing-message, .contact{
+        margin-bottom: 35px;
+    }
+    .fav-list__li{
+        flex-direction: column;
+        margin: 10px;
+        height: 88px;
+    }
+    .fav-list__li-container{
+        align-items: center;
+    }
+}
+
+/** Small Mobile **/
+@media only screen and (max-width: 326px){
+    .header__logo{
+        width: 120;
+    }
+    .fav-list__li{
+        height: 107px;
+    }
+}
+
+/** 
+425px tablet: make space between bullet point and text smaller,
+make line height for t&cs smaller
+
+375px: make line height smaller in general, make logo smaller, put bullet point on its own line
+**/
